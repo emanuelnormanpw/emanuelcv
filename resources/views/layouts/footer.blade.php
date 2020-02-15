@@ -12,6 +12,7 @@
     <a href="mailto:emanuelnpw@gmail.com"><h5 class="text-white light m-r-25">emanuelnpw@gmail.com</h5></a>
   </div>
 
+
   <a href="https://api.whatsapp.com/send?phone=+6287759011123">
   <div class="text-white p-l-0 col m-r-10 d-flex align-items-center">
     <img style="width: 20px;" src="assets/images/import/phone-footer.png" alt="">
