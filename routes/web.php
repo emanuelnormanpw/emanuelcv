@@ -13,4 +13,6 @@
 
 Route::get('/', 'homepageController@getHomepage')->name('homepage');
 
+Route::get('/download', 'homepageController@getDownload')->name('download');
+
 Route::get('/welcome', 'welcomeController@getwelcome')->name('welcome');

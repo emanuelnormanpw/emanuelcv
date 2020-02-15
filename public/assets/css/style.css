@@ -46,36 +46,49 @@ TABLES OF CSS
 
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600");
+
+/* ======
+00. Custom
+   ====== */
+
+   .sp-hover{
+     width: 40%;
+   }
+
+   .text-footer{
+     padding-left: 10%;
+     padding-right: 10%;
+   }
+
+  .bg-orange {
+    background-color: #EC9421;
+  }
+
+   .text-orange{
+     color: #EC9421;
+   }
+
+   .btn-email{
+     background-color: transparent;
+     border: #EC9421 solid 1px;
+   }
+
+   .btn-email:hover{
+     background-color: #EC9421;
+     color: white;
+   }
+
+   .text-10{
+     font-size: 2rem;
+     text-transform: uppercase;
+   }
+
+
 /* ======
 01. General
    ====== */
 
-.sp-hover{
-  width: 50%;
-}
 
-.sp-hover:hover{
-  width: 70%;
-  -webkit-transition: all 1s ease-out;
-}
-
-    .text-footer{
-      padding-left: 10%;
-      padding-right: 10%;
-    }
-
-   .bg-orange {
-     background-color: #EC9421;
-   }
-
-    .text-orange{
-      color: #EC9421;
-    }
-
-    .text-10{
-      font-size: 2rem;
-      text-transform: uppercase;
-    }
 
    html, body {
 
@@ -430,6 +443,10 @@ dt {
 ===================*/
 .p-0 {
   padding: 0;
+}
+
+.p-l-0{
+  padding-left: 0px;
 }
 
 .p-t-10 {
@@ -1142,6 +1159,11 @@ body {
 */
 @media (min-width: 992px) {
 
+
+  .sp-res-lg{
+    text-align: left;
+  }
+
   .foto-res .foto-lg{
     width: 80%;
   }
@@ -1255,7 +1277,11 @@ body {
 
 @media (max-width: 991px) {
 
-  
+  .sp-res{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+  }
 
   .sp-res-div{
     display: none;
@@ -1384,6 +1410,7 @@ body {
 
 @media (min-width: 768px) {
 
+
   .foto-res .foto-lg{
     width: 80%;
   }
@@ -1432,6 +1459,11 @@ body {
 }
 
 @media (max-width: 767px) {
+
+  .sp-res{
+    justify-content: center;
+    display: flex;
+  }
 
   .sp-res-div{
     display: none;
@@ -1492,7 +1524,7 @@ body {
   .foto .foto-sm{
 
     display: inline;
-    width: 70%;
+    width: 60%;
   }
 
   .tool-res .tool-lg{
@@ -1574,17 +1606,6 @@ button:focus {
 .btn-danger, .btn-dark, .btn-pink, .btn-purple, .btn-indigo, .btn-teal,
 .btn-lime, .btn-orange, .btn-brown, .btn-blue-grey {
   color: #ffffff;
-}
-
-.btnemail:hover{
-  background-color: #EC9421;
-  color: white;
-}
-
-.btn-orange{
-  background-color: #ffffff;
-  color: black;
-  border: 1px solid #EC9421;
 }
 
 .btn-primary {
@@ -1727,6 +1748,7 @@ button:focus {
 }
 
 /* button Outline */
+
 .btn-outline-primary {
   color: #7a6fbe;
   border-color: #7a6fbe;
