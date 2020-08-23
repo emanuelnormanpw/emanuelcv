@@ -6,7 +6,10 @@
 
 @section('content')
 
-<div class="container-fluid">
+<section class="container-fluid no-padding" id="homepage">
+  <div id="homepage-name">
+
+
     <div class="embed-responsive-item row">
 
       <div class="embed-responsive-item col-6 foto-res">
@@ -50,9 +53,10 @@
       </div>
 
     </div>
+      </div>
 
 
-    <div class="text-center m-t-30 p-t-200">
+    <div class=" text-center m-t-30 p-t-40">
 
       <h4 class="bold text-orange">EXPERIENCE</h4>
 
@@ -60,7 +64,7 @@
 
         <div class="col-lg-4">
           <div class="col-12">
-            <img style="width: 40%;" src="assets/images/import/ex-web.png" alt="">
+            <img style="width: 45%;" src="assets/images/import/ex-web.png" alt="">
           </div>
 
           <div class="d-flex justify-content-center col-12" style="padding-top:40px;">
@@ -94,68 +98,22 @@
 
     <div class="text-center m-t-30 p-t-40">
       <h4 class="bold text-orange">SELECTED PROJECT</h4>
-      <div class="d-flex justify-content-center p-t-40 row">
-        <div class="col-lg-12">
 
-          <div class="col-lg-12">
-            <div class="sp-res row">
-              <div class="col-lg-6 d-flex align-items-center ">
-                <div class="row sp-res">
-                  <div class="sp-res-lg text-orange">
-                    <h5 class="bold">DASHBOARD WEBSITE</h5>
-                    <h6 class="medium">Final Project</h6>
-                    <hr>
-                  </div>
-                  <div class="m-t-10 sp-res">
-                    <p class="text-orange light m-b-30" style="width:90%; font-size:1rem; text-align:justify;">I'm a fresh graduate that have interest in technology. I'm able to use programming system and have some experience about making website . I also have developed enterpreneur skills from my study in Duta Wacana Christian University. I have friendly personality which make me a great team player and bring positive attitude, great communication skills and passion to my work</p>
-                  </div>
-                </div>
-              </div>
-              <div class="sp-res-div col-6 align-self-center">
-                <img class="sp-hover" src="assets/images/import/pr-fp.png" alt="">
-              </div>
-            </div>
-          </div>
+      <div class="p-t-40 row">
+        <div class="d-flex justify-content-center row">
 
-          <div class="col-lg-12 m-t-40">
-            <div class="sp-res row">
-              <div class="col-lg-6 d-flex align-items-center ">
-                <div class="row sp-res">
-                  <div class="sp-res-lg text-orange">
-                    <h5 class="bold">BOROBUDUR SILVER</h5>
-                    <h6 class="medium">Graphic Designer & Photography</h6>
-                    <hr>
-                  </div>
-                  <div class="m-t-10 sp-res">
-                    <p class="text-orange light m-b-30" style="width:90%; font-size:1rem; text-align:justify;">I'm a fresh graduate that have interest in technology. I'm able to use programming system and have some experience about making website . I also have developed enterpreneur skills from my study in Duta Wacana Christian University. I have friendly personality which make me a great team player and bring positive attitude, great communication skills and passion to my work</p>
-                  </div>
-                </div>
-              </div>
-              <div class="sp-res-div col-6 align-self-center">
-                <img class="sp-hover" src="assets/images/import/pr-bnb.png" alt="">
-              </div>
+            <div class="selected-project p-3 mb-2 col-lg-4">
+             <a href="/project-borobudur-silver"><img class="selected-project-img" style="width: 70%;" src="assets/images/import/dashboard-sp-01.png" alt=""></a>
             </div>
-          </div>
 
-          <div class="col-lg-12 m-t-40">
-            <div class="sp-res row">
-              <div class="col-lg-6 d-flex align-items-center ">
-                <div class="row sp-res">
-                  <div class="sp-res-lg text-orange">
-                    <h5 class="bold">HELIPos</h5>
-                    <h6 class="medium">Motion Graphic</h6>
-                    <hr>
-                  </div>
-                  <div class="m-t-10 sp-res">
-                    <p class="text-orange light m-b-30" style="width:90%; font-size:1rem; text-align:justify;">I'm a fresh graduate that have interest in technology. I'm able to use programming system and have some experience about making website . I also have developed enterpreneur skills from my study in Duta Wacana Christian University. I have friendly personality which make me a great team player and bring positive attitude, great communication skills and passion to my work</p>
-                  </div>
-                </div>
-              </div>
-              <div class="sp-res-div col-6 align-self-center">
-                <img class="sp-hover" src="assets/images/import/pr-helipos.png" alt="">
-              </div>
+            <div class="selected-project p-3 mb-2 col-lg-4">
+             <a href="/project-helipos"><img class="selected-project-img" style="width: 70%;" src="assets/images/import/dashboard-sp-02.png" alt="">
+            </div></a>
+
+            <div class="selected-project p-3 mb-2 col-lg-4">
+             <a href="/project-dashboard"><img class="selected-project-img" style="width: 70%;" src="assets/images/import/dashboard-sp-03.png" alt=""></a>
             </div>
-          </div>
+         
 
         </div>
       </div>
@@ -173,9 +131,6 @@
       </div>
 
     </div>
-
-    <!-- end row -->
-</div> <!-- end container-fluid -->
 
 @endsection
 
