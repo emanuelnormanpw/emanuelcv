@@ -105,6 +105,101 @@ Notes:
 
 ---
 
+## Emotion CSS Scoping Rules
+
+### 1 One `css={}` prop per component root
+
+- Apply the Emotion `css` prop **only on the root element** of a component.
+- All child elements use plain `className` instead of the `css` prop.
+
+  ```tsx
+  // ✅ Correct
+  const Hero = () => (
+    <section css={heroSectionCx}>
+      <div className="hero-inner">
+        <h1 className="hero-title">...</h1>
+      </div>
+    </section>
+  );
+
+  // ❌ Wrong — css prop on every child
+  const Hero = () => (
+    <section css={heroSectionCx}>
+      <div css={heroInnerCx}>
+        <h1 css={heroTitleCx}>...</h1>
+      </div>
+    </section>
+  );
+  ```
+
+### 2 styles.ts uses a single scoped `css` block
+
+- Export one `css` template literal per component from `styles.ts`.
+- Nest all child class selectors inside that single root block.
+- Use kebab-case class names that match what the component passes as `className`.
+
+  ```ts
+  // styles.ts
+  export const heroSectionCx = css`
+    padding: 1.5rem;
+
+    .hero-inner {
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 11vw, 6rem);
+      color: #ffffff;
+    }
+  `;
+  ```
+
+### 3 No inline `style={}` props
+
+- **Inline `style` props are prohibited** in component files.
+- All visual styles — including one-off overrides, opacity, gradients, and layout — must live in `styles.ts`.
+- Use modifier class names (e.g. `.pricing-feature-text--excluded`) or `:nth-child` selectors for per-item variations.
+
+  ```tsx
+  // ❌ Prohibited
+  <div style={{ marginBottom: "1rem", opacity: 0.4 }} />
+
+  // ✅ Correct — class drives the style
+  <div className="stat-item" />
+
+  // styles.ts
+  .stat-item {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  ```
+
+### 4 BEM-style modifier classes for variants
+
+- Use `--modifier` suffix for variant states inside the same component scope.
+
+  ```tsx
+  <article
+    className={`pricing-card${pkg.popular ? " pricing-card--popular" : ""}`}
+  />
+  ```
+
+  ```ts
+  .pricing-card {
+    border: 0.0625rem solid rgba(255,255,255,0.1);
+
+    &--popular {
+      border-color: rgba(255,255,255,0.35);
+    }
+  }
+  ```
+
+---
+
 ## CSS Styling Rules
 
 1. **Avoid grouped class selectors with commas.** When a selector targets multiple class scopes, split it into parent-scoped blocks.
